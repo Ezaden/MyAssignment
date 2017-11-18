@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="UkraineAirlineEntities-Web.config Connection String" description="UkraineAirlineEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.RegistrationModel.csdl|res://*/Models.RegistrationModel.ssdl|res://*/Models.RegistrationModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-0C5AR\SQLEXPRESS01;initial catalog=UkraineAirline;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\user\\Desktop\\MyApp\\MyApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='UkraineAirlineEntities']/@connectionString" />
+  </parameter>
+  <parameter name="UkraineAirlineEntities1-Web.config Connection String" description="UkraineAirlineEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.BookingModel.csdl|res://*/Models.BookingModel.ssdl|res://*/Models.BookingModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-0C5AR\SQLEXPRESS01;initial catalog=UkraineAirline;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\user\\Desktop\\MyApp\\MyApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='UkraineAirlineEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="UkraineAirlineEntities2-Web.config Connection String" description="UkraineAirlineEntities2 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.BookintModel.csdl|res://*/Models.BookintModel.ssdl|res://*/Models.BookintModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-0C5AR\SQLEXPRESS01;initial catalog=UkraineAirline;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\user\\Desktop\\MyApp\\MyApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='UkraineAirlineEntities2']/@connectionString" />
+  </parameter>
+</parameters>

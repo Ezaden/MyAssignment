@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UkraineAirlineModel1StoreContainer" CdmEntityContainer="UkraineAirlineEntities1">
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="UkraineAirlineModel1.Booking">
+        <MappingFragment StoreEntitySet="Booking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FlightName" ColumnName="FlightName" />
+          <ScalarProperty Name="Dept_City" ColumnName="Dept_City" />
+          <ScalarProperty Name="Arrival_City" ColumnName="Arrival_City" />
+          <ScalarProperty Name="Dept_Date" ColumnName="Dept_Date" />
+          <ScalarProperty Name="Retrun_Date" ColumnName="Retrun_Date" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SeatNumber" ColumnName="SeatNumber" />
+          <ScalarProperty Name="NumberOfPassenger" ColumnName="NumberOfPassenger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

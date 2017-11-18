@@ -1,0 +1,97 @@
+﻿@model MyApp.Models.Booking
+
+@{
+    ViewBag.Title = "welcome";
+    List<SelectListItem> list = new List<SelectListItem>();
+    list.Add(new SelectListItem() { Text = "Singapore", Value = "Singapore" });
+    list.Add(new SelectListItem() { Text = "Peth", Value = "Perth" });
+    list.Add(new SelectListItem() { Text = "London", Value = "London" });
+    list.Add(new SelectListItem() { Text = "Paris", Value = "Paris" });
+    list.Add(new SelectListItem() { Text = "Stockholm", Value = "Stockholm" });
+}
+<body style="background-image: url(http://www.ccsgeorgia.org/wp-content/uploads/2017/01/light-gradient-wallpaper-26039-26724-hd-wallpapers.jpg.png)" ;>
+    <h2>Hi! Welcome To Ukraine Airline Booking System. Your email is: @Session["Email"].ToString()</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Booking</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Dept_City, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Dept_City, list, new { htmlAttributes = new { @class = "inpt2" } })
+                    @Html.ValidationMessageFor(model => model.Dept_City, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Arrival_City, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Arrival_City, list, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Arrival_City, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Dept_Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Dept_Date, new { htmlAttributes = new { @class = "datepicker" } })
+                    @Html.ValidationMessageFor(model => model.Dept_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Retrun_Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Retrun_Date, new { htmlAttributes = new { @class = "datepicker" } })
+                    @Html.ValidationMessageFor(model => model.Retrun_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SeatNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SeatNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SeatNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NumberOfPassenger, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NumberOfPassenger, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NumberOfPassenger, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Book" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Logout", "Index")
+    </div>
+</body>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+        <script>
+
+        $(function () {
+            $(".datepicker").datepicker();
+        });
+
+        </script>
+    }
+
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
